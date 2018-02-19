@@ -1,7 +1,8 @@
+C_INCLUDE_PATH=src
 CC=gcc
-CXX_FLAGS=-std=c99 -pedantic -Wall
+CFLAGS=-std=c99 -pedantic -Wall -Iinclude
 
-spaceship: spaceship.o
+spaceship: main.o spaceship.o thrust.o fuel.o ui.o
 
 .PHONY: clean
 clean:
